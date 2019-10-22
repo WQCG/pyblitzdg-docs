@@ -12,7 +12,7 @@ The back-end of `pyblitzdg` focuses on robust and efficient C++ implementation d
 
 From a historical point-of-view, most scientific physical modelling programs were written by researchers using low-level languages such as C or Fortran for speed and memory efficiency. Since most numerical libraries only implement very low-level details not specific to finite element methods, this left a gap for most physical model developers to fill in on their own. As a result, it could take one or more years to complete model code development and establish via test-cases that the output is correct.
 
-`pyblitzdg`alleviates these headaches by providing finite element implementations that are agnostic to their end use-case in a model. These implementations are backed by unit-tests asserting the correctness of each independent piece of the bigger puzzle, with a high percentage of code-path coverage and validating numerical assertions, `pyblitzdg` offers a base-line of openness and quality that you can count on for your model development work.
+`pyblitzdg`alleviates these headaches by providing finite element implementations that are agnostic to their end use-case in a model. These implementations are backed by unit-tests asserting the correctness of each independent piece of the bigger puzzle. With a high percentage of code-path coverage and validating numerical assertions, `pyblitzdg` offers a base-line of openness and quality that you can count on for your model development work.
 
 ## License
 

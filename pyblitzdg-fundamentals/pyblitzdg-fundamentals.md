@@ -2,7 +2,7 @@
 description: Instructions for how to install pyblitzdg on top of your python environment
 ---
 
-# Installing the latest pyblitzdg
+# Installing the Latest Pyblitzdg
 
 ### Preliminaries
 
