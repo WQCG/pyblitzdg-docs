@@ -12,3 +12,7 @@
 
 * [The First 2D Models](learning-by-example/the-first-2d-models.md)
 
+## API Reference
+
+* [Python 3 API v1.0](api-reference/api-reference.md)
+
