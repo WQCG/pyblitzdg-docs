@@ -2,7 +2,7 @@
 description: Explanation of pyblitzdg classes and their member functions
 ---
 
-# Python 3 API v1.0
+# Python 3 API - v1.0
 
 **MeshManager** Class Reference
 

@@ -12,7 +12,7 @@
 
 * [The First 2D Models](learning-by-example/the-first-2d-models.md)
 
-## API Reference
+## Pyblitzdg API Reference <a id="api-reference"></a>
 
-* [Python 3 API v1.0](api-reference/api-reference.md)
+* [Python 3 API - v1.0](api-reference/api-reference.md)
 
