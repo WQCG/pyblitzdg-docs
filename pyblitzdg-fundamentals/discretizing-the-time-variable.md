@@ -6,7 +6,25 @@ The most commonly used approach for discretizing time in a numerical model is to
 
 The handling of the other terms in the PDEs causes numerical time discretization methods to branch out into two classes. If the remaining terms are evaluated at the current \(or known\) time \(or extrapolated from known times\), then the time-stepping method is called _explicit_**.** If, instead, the remaining terms are evaluated at the future \(or unknown\) time, then an algebraic equation results and the method is called _implicit_. If a combination if these two techniques is used, the scheme is called implicit-explicit \(IMEX\) or _mixed_.
 
-...
+### Forward Euler Method
 
+Supposing we have a PDE of the form
 
+$$
+\frac{\partial u}{\partial t} = \mathbb{L}(u) \,,
+$$
+
+where $$\mathbb{L}$$ is a continuous operator acting on $$u$$, the Forward Euler method applies the finite difference approximation to the time-derivative and evaluates the right-hand side at the known time value $$t_n = n \Delta t \,, \mbox{ for } n=0,1,2\cdots$$, i.e.,
+
+$$
+\frac{u^{n+1} - u^n}{\Delta t} = \mathbb{L}^n(u^n) \,.
+$$
+
+An explicit recipe for the field of interest $$u$$ at the time-level $$n+1$$ can then be found by rearranging as
+
+$$
+u^{n+1} = u^{n} + \Delta t \mathbb{L}^n(u^n) \,,
+$$
+
+and this expression is known as the Forward Euler Method or simply Euler's Method.
 
