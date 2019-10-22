@@ -86,30 +86,5 @@ Member function reference:
       </td>
     </tr>
   </tbody>
-</table>### 
-
-### 
-
-### Detailed Description
-
-Implements the explicit inverse of a dense matrix via the LAPACK routines DGETRF and DGETRI.
-
-The routine DGETRF computes the LU factorization of the dense matrix and DGETRI computes the inverse from the LU factorization.
-
-### Member Function Documentation
-
-### [◆ ](https://wqcg.github.io/blitzdg/classblitzdg_1_1DenseMatrixInverter.html#abc5fdde2a78d073764d11cb3b1bdae47)computeInverse\(\)
-
-| void blitzdg::DenseMatrixInverter::computeInverse | \( | const real\_matrix\_type &  | _A_, |
-| :--- | :--- | :--- | :--- |
-|  |  | real\_matrix\_type &  | _Ainv_  |
-|  | \) |  | const |
-
-Inverts the dense matrix ![$A$](https://wqcg.github.io/blitzdg/form_2.png).Parameters
-
-| \[in\] | A | The ![$n\times n$](https://wqcg.github.io/blitzdg/form_3.png) coefficient matrix. |
-| :--- | :--- | :--- |
-| \[out\] | Ainv | The ![$n\times n$](https://wqcg.github.io/blitzdg/form_3.png) inverse of matrix A. |
-
-NoteWe assume that the matrix ![$A$](https://wqcg.github.io/blitzdg/form_2.png) uses the default rowwise storage order of blitz++ 2D arrays.
+</table>
 
