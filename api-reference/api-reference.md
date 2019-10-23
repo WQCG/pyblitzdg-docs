@@ -53,7 +53,7 @@ Member function reference:
     <tr>
       <td style="text-align:left"><b>Arguments</b>
       </td>
-      <td style="text-align:left">[in] <em>path</em> - string containing the &apos;path/to/meshFile.msh&apos;</td>
+      <td style="text-align:left"><b>[in]</b>  <em>path</em> - string containing the &apos;path/to/meshFile.msh&apos;</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
@@ -73,16 +73,16 @@ Member function reference:
       <td style="text-align:left"><b>Arguments</b>
       </td>
       <td style="text-align:left">
-        <p>[in] <em>elements</em> - 2D numpy array of elements pointing to row-indices
+        <p><b>[in]</b>  <em>elements</em> - 2D numpy array of elements pointing to row-indices
           in the <em>vertices</em> array with shape (K, Vk) where K is the number of
           elements in the mesh and Vk is the number of vertices per element (e.g.,
           Vk=3 for triangles).</p>
         <p></p>
-        <p>[in] <em>vertices</em> - 2D numpy array with each row containing the (x,
-          y, z) coordinates of a vertex in the mesh. For 2D meshes, take z=0.0 for
-          all rows. The shape of this array is (Nv, 3) where Nv is the number of
-          vertices in the unstructured mesh and 3 is the (fixed) dimensionality of
-          the Cartesian coordinate system.</p>
+        <p><b>[in]</b>  <em>vertices</em> - 2D numpy array with each row containing
+          the (x, y, z) coordinates of a vertex in the mesh. For 2D meshes, take
+          z=0.0 for all rows. The shape of this array is (Nv, 3) where Nv is the
+          number of vertices in the unstructured mesh and 3 is the (fixed) dimensionality
+          of the Cartesian coordinate system.</p>
       </td>
     </tr>
   </tbody>
