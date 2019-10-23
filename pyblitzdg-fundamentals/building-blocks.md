@@ -22,11 +22,11 @@ $$
  The 2D heat flow equation is also called the "diffusion equation", since it also models the transport behaviour of dissolved solutes.
 {% endhint %}
 
-In a nutshell, the above lines of mathematical notation tells us that we need to provide as input a physical \(spatial\) domain \(Omega\) with closed boundary \(dOmega\), initial condition data \(u\_{init}\). If you solve this equation \(say, analytically with Fourier series\), you will have the solution u\(x,y,t\) for all times after t=0. That is, the output is a sort of 'animation', if it is visually interpreted as such.
+In a nutshell, the above lines of mathematical notation tells us that we need to provide as input a physical \(spatial\) domain $$\Omega$$ with closed boundary $$\partial \Omega$$, initial condition data $$u_{init}$$. If you solve this equation \(say, analytically with Fourier series\), you will have the solution $$u(x,y,t)$$ for all times after $$t=0$$. That is, the output is a sort of 'animation', if it is visually interpreted as such.
 
 All physical models based on mathematical equations behave in this way, regardless of whether they are steady \(e.g., where the forcing is prescribed, and the ensuing motion is unknown\) or unsteady \(transient heat flow, fluid flow, etc.\) problems.
 
-\[Insert diagram for workflow of solving a PDE\].
+![Workflow for obtaining the solution to a physical problem of interest](../.gitbook/assets/method-draw-image-2.svg)
 
 In summary, a physical model \(an equation with boundary conditions\) is a sort of "machine", or computing process, that wants as input the initial representation of the field of interest, and the domain under consideration \(e.g., a disk, a cylinder, a box, the surface of an airplane, etc.\). It returns as output, the values of the field of interest for all times in the future.
 

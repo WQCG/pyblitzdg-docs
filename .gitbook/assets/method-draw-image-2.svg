@@ -1,0 +1,25 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="svg_3" height="74" width="167.999993" y="44.4375" x="63.5" stroke-width="1.5" fill="#fff"/>
+  <text stroke="#000" transform="matrix(1.3647522926330566,0,0,1.1111111640930176,-51.612449407577515,-7.270836800336838) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_5" y="86.5375" x="88.079505" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Initial Data</text>
+  <rect id="svg_6" height="74" width="171" y="45.4375" x="290.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text stroke="#000" transform="matrix(0.7872576117515564,0,0,1,64.35457244515419,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_8" y="86.4375" x="298.689303" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Domain of Interest</text>
+  <text stroke="#000" transform="matrix(1.540084362030029,0,0,1.3374340534210205,-132.21096396446228,-18.23022598400712) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_9" y="81.4375" x="248.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">+</text>
+  <text stroke="#000" transform="matrix(2.4918415546417236,0,0,3.160650405942306,-361.771577000618,-305.5862639200036) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_17" y="152.869317" x="240.493452" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">⇩</text>
+  <rect stroke="#000" id="svg_22" height="74" width="274.999981" y="191.4375" x="126.5" stroke-width="1.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_23" y="219.4375" x="193.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">PDE System</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_24" y="248.4375" x="127.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">with Boundary Conditions</text>
+  <text stroke="#000" transform="matrix(2.491841554641723,0,0,3.2671171275863458,-364.771577000618,-282.37484874447983) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_25" y="186.200386" x="243.703929" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">⇩</text>
+  <rect stroke="#000" id="svg_27" height="74" width="332.999984" y="324.4375" x="109.499997" stroke-width="1.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_28" y="368.4375" x="139.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Solution Data / Animation</text>
+ </g>
+</svg>
