@@ -4,7 +4,7 @@ description: Explanation of pyblitzdg classes and their member functions
 
 # Python 3 API - v1.0
 
-**MeshManager** Class Reference
+### **MeshManager** **Class Reference**
 
 The MeshManager class is primarily used for constructing unstructured numerical meshes in pyblitzdg, either from known supported mesh file formats \(e.g., Gmsh .msh files\), or from numpy arrays.
 
@@ -86,5 +86,11 @@ Member function reference:
       </td>
     </tr>
   </tbody>
-</table>
+</table>Property reference:
+
+|  |  |
+| :--- | :--- |
+| **Property** | numElements |
+| **Description** | The __number of elements in the mesh. |
+|  |  |
 
