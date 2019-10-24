@@ -46,7 +46,8 @@ Member functions reference:
       <td style="text-align:left"><b>Description</b>
       </td>
       <td style="text-align:left">
-        <p>Reads the Gmsh at <em>path</em>, provided as a string and store its</p>
+        <p>Reads the Gmsh *.msh file at <em>path</em>, provided as a string and store
+          its</p>
         <p>data on the MeshManager object itself.</p>
       </td>
     </tr>
