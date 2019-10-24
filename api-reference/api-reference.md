@@ -156,7 +156,17 @@ Member functions reference:
         coefficients. Here, is the polynomial cut-off order, above which the filter
         is active, and below which the filter is identically equal to the identity
         map (inactive), and is a shape parameter that specifies the order of the
-        exponential transfer function,</td>
+        exponential transfer function, .</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Arguments</b>
+      </td>
+      <td style="text-align:left">
+        <p><b>[in] </b><em>Nc </em>- The cut-off order of the exponential filtering
+          function.</p>
+        <p><b>[in]</b>  <em>Nf</em> - Shape parameter specifying the order of the exponential
+          filtering function.</p>
+      </td>
     </tr>
   </tbody>
 </table>
