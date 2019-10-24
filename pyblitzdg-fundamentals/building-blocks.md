@@ -8,7 +8,7 @@ description: >-
 
 ## What does a finite element model need?
 
-In mathematical terms, a finite element model creates a discrete representation of a \(continuous\) mathematical model. The mathematical model may be either a single or a set of partial differential equations \(PDEs\).
+In mathematical terms, a finite element model creates a discrete representation of a \(continuous\) mathematical model. The mathematical model may be either one or many \(coupled\) partial differential equations \(PDEs\).
 
 Consider the example of the 2D heat flow equation on the bi-unit square, subject to appropriate initial data and no-flux boundary conditions, i.e.,
 
@@ -22,13 +22,13 @@ $$
  The 2D heat flow equation is also called the "diffusion equation", since it also models the transport behaviour of dissolved solutes.
 {% endhint %}
 
-In a nutshell, the above lines of mathematical notation tells us that we need to provide as input a physical \(spatial\) domain $$\Omega$$ with closed boundary $$\partial \Omega$$, initial condition data $$u_{init}$$. If you solve this equation \(say, analytically with Fourier series\), you will have the solution $$u(x,y,t)$$ for all times after $$t=0$$. That is, the output is a sort of 'animation', if it is visually interpreted as such.
+In a nutshell, the above lines of mathematical notation tell us that we need to provide as input a physical \(spatial\) domain $$\Omega = [-1,1] \times [-1, 1]$$ with closed boundary $$\partial \Omega$$, and initial condition data $$u_{init}$$. If you solve this equation \(say, analytically with Fourier series\), you will have the solution $$u(x,y,t)$$ for all times after $$t=0$$. That is, the output is a sort of 'animation', if it is visually interpreted as such.
 
 All physical models based on mathematical equations behave in this way, regardless of whether they are steady \(e.g., where the forcing is prescribed, and the ensuing motion is unknown\) or unsteady \(transient heat flow, fluid flow, etc.\) problems.
 
-![Workflow for obtaining the solution to a physical problem of interest](../.gitbook/assets/method-draw-image-2.svg)
+![Workflow for obtaining the solution to a physical problem of interest.](../.gitbook/assets/method-draw-image-2.svg)
 
-In summary, a physical model \(an equation with boundary conditions\) is a sort of "machine", or computing process, that wants as input the initial representation of the field of interest, and the domain under consideration \(e.g., a disk, a cylinder, a box, the surface of an airplane, etc.\). It returns as output, the values of the field of interest for all times in the future.
+In summary, a physical model \(an equation with boundary conditions\) is a sort of "machine", or computing process, that wants as input the initial representation of the field of interest \(such as temperature, or velocity\), and the domain under consideration \(e.g., a disk, a cylinder, a box, the surface of an airplane, etc.\). It returns as output the values of the field of interest for all times in the future.
 
 ### Discretized Spatial Domain
 
@@ -42,5 +42,5 @@ We won't get into the details of creating a model geometry and mesh with `Gmsh` 
 
 ### Discretized Initial Model Data
 
-For heuristic test cases, one often prescribed the initial state in terms of known mathematical functions ,e.g., `exp`, `sin`, `cos`, etc., of the independent spatial variables \(x, y, z\). For more realistic applications, e.g., weather simulation, one most often use a combination of spatial curve-fitting alongside data assimilation techniques which draw in measurement sources to provide initial solution distributions as close to 'truth' as possible. 
+For heuristic test cases, one often prescribed the initial state in terms of known mathematical functions ,e.g., `exp`, `sin`, `cos`, etc., of the independent spatial variables \(x, y, z\). For more realistic applications, e.g., weather simulations, one most often uses a combination of spatial curve-fitting methods alongside data assimilation techniques, which draw in measurement sources to provide initial solution distributions as close to 'truth' as possible. 
 
