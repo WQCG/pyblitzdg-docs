@@ -44,5 +44,5 @@ $$
 u^{n+1} - \Delta t \mathbb{L}^{n+1}(u^{n+1}) = u^n\,,
 $$
 
-and it is clear that explicit formulas are not possible unless the operator $$\mathbb{L}$$ is quite simple. This last form is the prototypical algebraic equation that must be solved for the field $$u^{n+1}$$ in all time-stepping schemes with an implicit part. Although this equation is in general nonlinear, linear approximations are often used in practised, and they can be argued as reasonable approximations provided $$ \Delta t $$ is sufficiently small.
+and it is clear that explicit formulas are not possible unless the operator $$\mathbb{L}$$ is quite simple. This last form is the prototypical algebraic equation that must be solved for the field $$u^{n+1}$$ in all time-stepping schemes with an implicit part. Although this equation is in general nonlinear, linear approximations are often used in practice, and they can be argued as reasonable approximations provided $$ \Delta t $$ is sufficiently small.
 

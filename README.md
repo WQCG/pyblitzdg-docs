@@ -18,7 +18,7 @@ From a historical point-of-view, most scientific physical modelling programs wer
 
   
 Pyblitzdg official docs by [Waterloo Quantitative Consulting Group \(WQCG, a not-for-profit corporation\)](https://wqcg.ca) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).  
-Based on a work at [https://dsteinmo.gitbook.io/pyblitzdg-official-docs/](https://dsteinmo.gitbook.io/pyblitzdg-official-docs/).  
+Based on a work at [https://wqcg.gitbook.io/pyblitzdg-official-docs/](https://dsteinmo.gitbook.io/pyblitzdg-official-docs/).  
   
 Permissions beyond the scope of this license may be available at [https://github.com/WQCG/pyblitzdg-docs](https://github.com/WQCG/pyblitzdg-docs).
 

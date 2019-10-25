@@ -19,17 +19,18 @@ Member functions reference:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>Method</b>
+      <td style="text-align:left"><em><b>Method</b></em>
       </td>
-      <td style="text-align:left">__init__(<em>self</em>)</td>
+      <td style="text-align:left"><b>__init__(</b><em><b>self</b></em><b>)</b>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Description</b>
+      <td style="text-align:left"><em><b>Description</b></em>
       </td>
       <td style="text-align:left">Constructor</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Arguments</b>
+      <td style="text-align:left"><em><b>Arguments</b></em>
       </td>
       <td style="text-align:left">None</td>
     </tr>
@@ -38,12 +39,13 @@ Member functions reference:
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"> <b>Method</b>
+      <td style="text-align:left"> <em><b>Method</b></em>
       </td>
-      <td style="text-align:left">readMesh (<em>self, path</em>)</td>
+      <td style="text-align:left"><b>readMesh (</b><em><b>self, path</b></em><b>) </b>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Description</b>
+      <td style="text-align:left"><em><b>Description</b></em>
       </td>
       <td style="text-align:left">
         <p>Reads the Gmsh *.msh file at <em>path</em>, provided as a string and store
@@ -52,7 +54,7 @@ Member functions reference:
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Arguments</b>
+      <td style="text-align:left"><em><b>Arguments</b></em>
       </td>
       <td style="text-align:left"><b>[in]</b>  <em>path</em> - string containing the &apos;path/to/meshFile.msh&apos;</td>
     </tr>
@@ -61,17 +63,18 @@ Member functions reference:
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Method</b>
+      <td style="text-align:left"><em><b>Method</b></em>
       </td>
-      <td style="text-align:left">buildMesh(<em>self</em>, <em>elements</em>, <em>vertices</em>)</td>
+      <td style="text-align:left"><b>buildMesh(</b><em><b>self</b></em><b>, </b><em><b>elements</b></em><b>, </b><em><b>vertices</b></em><b>)</b>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Description</b>
+      <td style="text-align:left"><em><b>Description</b></em>
       </td>
       <td style="text-align:left">Builds a mesh from known <em>numpy.ndarray</em> objects <em>elements</em> and <em>vertices</em>.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Arguments</b>
+      <td style="text-align:left"><em><b>Arguments</b></em>
       </td>
       <td style="text-align:left">
         <p><b>[in]</b>  <em>elements</em> - 2D numpy array of elements pointing to row-indices
@@ -91,11 +94,13 @@ Member functions reference:
 
 |  |  |
 | :--- | :--- |
-| **Property** | numElements |
-| **Description** | The __number of elements in the mesh. |
+| _**Property**_ | **numElements** |
+| _**Description**_ | The __number of elements in the mesh. |
 |  |  |
 
 ### TriangleNodesProvisioner Class Reference
+
+The TriangleNodesProvisioner object bridges the gap between the finite element mesh and a complete nodal discretization of the domain of interest. It takes a MeshManager object and a polynomial order $$N = 1,2,\cdots\;$$and provides access to the _DGContext_, an object that encapsulates all the spatial discretization data necessary for carrying out a PDE simulation in the domain of interest.
 
 <table>
   <thead>
@@ -106,19 +111,20 @@ Member functions reference:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>Method</b>
+      <td style="text-align:left"><em><b>Method</b></em>
       </td>
-      <td style="text-align:left">__init__(self, <em>N</em>, <em>meshManager</em>)</td>
+      <td style="text-align:left"><b>__init__(</b><em><b>self</b></em><b>, </b><em><b>N</b></em><b>, </b><em><b>meshManager</b></em><b>)</b>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Description</b>
+      <td style="text-align:left"><em><b>Description</b></em>
       </td>
       <td style="text-align:left">Constructor - Takes as arguments the order N of the underlying interpolating
         polynomials to use, and a MeshManager object that is expected to already
         contain the mesh in its state.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Arguments</b>
+      <td style="text-align:left"><em><b>Arguments</b></em>
       </td>
       <td style="text-align:left">
         <p><b>[in]</b>  <em>N</em> - The order of the basis polynomials used in the
@@ -129,29 +135,31 @@ Member functions reference:
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Method</b>
+      <td style="text-align:left"><em><b>Method</b></em>
       </td>
-      <td style="text-align:left">dgContext(<em>self</em>)</td>
+      <td style="text-align:left"><b>dgContext(</b><em><b>self</b></em><b>)</b>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Description</b>
+      <td style="text-align:left"><em><b>Description</b></em>
       </td>
       <td style="text-align:left">Returns the triangular element nodal discontinuous Galerkin (DG) context
         that was created during construction of this instance of the TriangleNodesProvisioner
         class.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Arguments</b>
+      <td style="text-align:left"><em><b>Arguments</b></em>
       </td>
       <td style="text-align:left">None</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Method</b>
+      <td style="text-align:left"><em><b>Method</b></em>
       </td>
-      <td style="text-align:left">buildFilter(<em>self</em>, <em>Nc</em>, <em>Nf</em>)</td>
+      <td style="text-align:left"><b>buildFilter(</b><em><b>self</b></em><b>, </b><em><b>Nc</b></em><b>, </b><em><b>Nf</b></em><b>)</b>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Description</b>
+      <td style="text-align:left"><em><b>Description</b></em>
       </td>
       <td style="text-align:left">Builds a local exponential cut-off filter in the space of the basis polynomial
         coefficients. Here, is the polynomial cut-off order, above which the filter
@@ -160,7 +168,7 @@ Member functions reference:
         exponential transfer function, .</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Arguments</b>
+      <td style="text-align:left"><em><b>Arguments</b></em>
       </td>
       <td style="text-align:left">
         <p><b>[in] </b><em>Nc </em>- The cut-off order of the exponential filtering
@@ -170,9 +178,90 @@ Member functions reference:
       </td>
     </tr>
   </tbody>
+</table>### VtkOutputter Class Reference
+
+The VtkOutputter class provides an easy-to-use interface for outputting the physical fields value at runtime-determined physical output times. The output is in unstructured \*.vtu file format from the [VTK](https://vtk.org) library, and can be readily rendered, visualized, and animated with [Paraview](https://paraview.org).
+
+Member function reference:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>__init__(</b><em><b>self</b></em><b>, </b><em><b>triangleNodesProvisioner</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Constructor. Requires a TriangleNodesProvisioner object.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left"><b>[in]</b>  <em>triangleNodesProvisioner</em> - Instance of the TriangleNodesProvisioner
+        class containing the details of the nodal element-wise spatial discretization
+        of the domain of interest.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>writeFieldToFile(self</b>, <em><b>fileName, field, fieldName</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Write a single physical field to a vtu file.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">
+        <p><b>[in]</b>  <em>fileName </em>- String containing then name of the output
+          file, e.g., &quot;u0000010.vtu&quot;.</p>
+        <p><b>[in</b>] <em>field<b> - </b></em>numpy.ndarray object containing a physical
+          field (i.e., a function of the spatial coordinates).</p>
+        <p><b>[in] </b><em>fieldName - </em>String containing the name of the field,
+          e.g., &quot;u&quot; or &quot;rho&quot;. Note: Choosing an appropriate fieldName
+          makes navigating the Paraview tool easier.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>writeFieldsToFiles(self, </b><em><b>fields</b></em><b>, </b><em><b>tstep</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Write a <em>dict()</em> of physical fields to a set of vtu files. Unlike
+        with the &apos;writeFieldToFile&apos; method, filenaming is handled internally
+        using the value of <em>tstep</em> and the name of each field as provided
+        by the python dictionary.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">
+        <p><b>[in]</b>  <em>fields</em> - dictionary whose keys correspond to <em>fieldNames </em>(strings)<em> </em>and
+          whose values correspond to numpy.ndarray objects containing the corresponding
+          physical field.</p>
+        <p><b>[in]</b>  <em>tstep</em> - An integer time-index value, used for numbering
+          the vtu files.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">&lt;b&gt;&lt;/b&gt;</td>
+    </tr>
+  </tbody>
 </table>
-
-|  |  |
-| :--- | :--- |
-|  |  |
-
