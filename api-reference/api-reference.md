@@ -100,7 +100,87 @@ Member functions reference:
 
 ### TriangleNodesProvisioner Class Reference
 
-The TriangleNodesProvisioner object bridges the gap between the finite element mesh and a complete nodal discretization of the domain of interest. It takes a MeshManager object and a polynomial order $$N = 1,2,\cdots\;$$and provides access to the _DGContext_, an object that encapsulates all the spatial discretization data necessary for carrying out a PDE simulation in the domain of interest.
+The TriangleNodesProvisioner object bridges the gap between the triangular finite element mesh and a complete nodal discretization of the domain of interest. It takes a MeshManager object and a polynomial order $$N = 1,2,\cdots\;$$and provides access to the _DGContext_, an object that encapsulates all the spatial discretization data necessary for carrying out a PDE simulation in the domain of interest.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>__init__(</b><em><b>self</b></em><b>, </b><em><b>N</b></em><b>, </b><em><b>meshManager</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Constructor - Takes as arguments the order N of the underlying interpolating
+        polynomials to use, and a MeshManager object that is expected to already
+        contain the mesh in its state.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">
+        <p><b>[in]</b>  <em>N</em> - The order of the basis polynomials used in the
+          local Galerkin expansion.</p>
+        <p><b>[in]</b>  <em>meshManager</em> - An instance of the MeshManager class.
+          It is assumed that either .<em>readMesh(...) or .buildMesh(...) </em>has
+          already been called on this MeshManager object</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>dgContext(</b><em><b>self</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Returns the triangular element nodal discontinuous Galerkin (DG) context
+        that was created during construction of this instance of the TriangleNodesProvisioner
+        class.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">None</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>buildFilter(</b><em><b>self</b></em><b>, </b><em><b>Nc</b></em><b>, </b><em><b>Nf</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Builds a local exponential cut-off filter in the space of the basis polynomial
+        coefficients. Here, is the polynomial cut-off order, above which the filter
+        is active, and below which the filter is identically equal to the identity
+        map (inactive), and is a shape parameter that specifies the order of the
+        exponential transfer function, .</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">
+        <p><b>[in] </b><em>Nc </em>- The cut-off order of the exponential filtering
+          function.</p>
+        <p><b>[in]</b>  <em>Nf</em> - Shape parameter specifying the order of the exponential
+          filtering function.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>### QuadNodesProvisioner Class Reference
+
+The QuadNodesProvisioner object bridges the gap between the quadrilateral finite element mesh and a complete nodal discretization of the domain of interest. It takes a MeshManager object and a polynomial order $$N = 1,2,\cdots\;$$and provides access to the _DGContext_, an object that encapsulates all the spatial discretization data necessary for carrying out a PDE simulation in the domain of interest.
 
 <table>
   <thead>
@@ -259,9 +339,19 @@ Member function reference:
           the vtu files.</p>
       </td>
     </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">&lt;b&gt;&lt;/b&gt;</td>
-    </tr>
   </tbody>
-</table>
+</table>### Poisson2DSparseMatrix Class Reference
+
+The Poisson2DSparseMatrix class allows for the construction of the two-dimensional discrete Poisson operator in sparse matrix form. The sparse matrix types are from the popular scipy.sparse Python 3 module.
+
+
+
+| title | **title** |
+| :--- | :--- |
+| _**Method**_ | **\_\_init\_\_\(self, dgContext2D\)** |
+| _**Description**_ | Constructor. Requires a DGContext2D object. |
+
+|  |  |
+| :--- | :--- |
+
+
