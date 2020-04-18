@@ -349,7 +349,7 @@ The Poisson2DSparseMatrix class allows for the construction of the two-dimension
 | title | **title** |
 | :--- | :--- |
 | _**Method**_ | **\_\_init\_\_\(self, dgContext2D\)** |
-| _**Description**_ | Constructor. Requires a DGContext2D object. |
+| _**Description**_ | Constructor. Requires a DGContext2D object. Currently only support context from TriangleNodesProvisioner |
 
 |  |  |
 | :--- | :--- |
