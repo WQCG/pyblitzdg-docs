@@ -344,8 +344,6 @@ Member function reference:
 
 The Poisson2DSparseMatrix class allows for the construction of the two-dimensional discrete Poisson operator in sparse matrix form. The sparse matrix types are from the popular scipy.sparse Python 3 module.
 
-
-
 <table>
   <thead>
     <tr>
