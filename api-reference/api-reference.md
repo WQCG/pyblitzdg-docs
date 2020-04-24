@@ -346,12 +346,90 @@ The Poisson2DSparseMatrix class allows for the construction of the two-dimension
 
 
 
-| title | **title** |
-| :--- | :--- |
-| _**Method**_ | **\_\_init\_\_\(self, dgContext2D\)** |
-| _**Description**_ | Constructor. Requires a DGContext2D object. Currently only support context from TriangleNodesProvisioner |
-
-|  |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">title</th>
+      <th style="text-align:left"><b>title</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>__init__(self, dgContext2D)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Constructor. Requires a DGContext2D object. Currently only support context
+        from TriangleNodesProvisioner</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left"><b>[in] </b><em>dgContext2D - </em>DGContext2D object.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>buildBcRhs(self, </b><em><b>dgContext2D, meshManager, ubc, qbc</b></em><b>)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Build boundary conditions contribution to right-hand side of the linear
+        system for the Poisson problem. Boundary fields are specified as <em>ubc </em>(Dirichlet)<b> </b>and <em>qbc </em>(Neuman).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">
+        <p><b>[in] </b><em>dgContext2D - </em>DGContext2D object.</p>
+        <p><b>[in]</b>  <em>meshManager</em> - The MeshManager object. Possibly containing
+          updated information about the types of boundary conditions selected along
+          the physical boundary.</p>
+        <p><b>[in]</b>  <em>ubc - </em>2D numpy array of dimension (NumFacePoints*NumFaces)
+          x NumElements specifying the Dirichlet boundary condition functions along
+          the physical boundary.</p>
+        <p><b>[in]</b>  <em>qbc - </em>2D numpy array of dimension (NumFacePoints*NumFaces)
+          x NumElements</p>
+        <p>specifying the Neuman boundary condition functions along the physical
+          boundary.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>getOP(self)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Method to retrieve the DG-discretized sparse 2D Poisson operator.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Arguments</b></em>
+      </td>
+      <td style="text-align:left">None</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Method</b></em>
+      </td>
+      <td style="text-align:left"><b>getMM(self)</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><em><b>Description</b></em>
+      </td>
+      <td style="text-align:left">Method to retrieve the DG-discretized sparse 2D Mass matrix operator.</td>
+    </tr>
+  </tbody>
+</table>|  | _\*\*\*\*_ |
 | :--- | :--- |
 
 
